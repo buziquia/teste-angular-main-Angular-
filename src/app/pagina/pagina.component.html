@@ -1,0 +1,32 @@
+<!--
+  // TODO: criar o layout como no diagrama
+  // TODO: adicionar o link de navegação à sidebar
+  // TODO: mostrar data e hora
+  // TODO: adicionar um input e um botão à página
+  // TODO: fazer aparecer o conteudo do input na pagina
+-->
+
+<header class="cabecalho">
+  <h1>{{titulo}}</h1>
+</header>
+<nav class="sidebar">
+  <h2>SideBar</h2>
+  <a href="start">Start</a>
+</nav>
+
+<div class="conteudo">
+  <h3 class=".formattexto">Hello, Word! Lavarel Ok</h3>
+  <div>
+    {{ now | date: "medium":"-0300":"" }}
+  </div>
+  <input type="text" [(ngModel)]="this.modelo" />
+  <br />
+  <span>
+    {{ modelo }}
+  </span>
+  <br />
+  <input type="button" value="Enviar" (click)="adicionar()" />
+  <br />
+
+  <div id="resbotao"></div>
+</div>
